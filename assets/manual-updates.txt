@@ -4,7 +4,11 @@ This is a live document to list configuration and content changes that should be
 
 Next Release
 -------------------
-
+Include the following lines in sites/default/settings.php
+$global_settings = dirname(__FILE__) . '/global.settings.php';
+if (file_exists($global_settings)) {
+  include $global_settings;
+}
 
 1.4 (example)
 -------------------
